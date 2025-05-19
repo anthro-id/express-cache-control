@@ -6,6 +6,9 @@
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "./index.d.ts"
