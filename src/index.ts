@@ -2,7 +2,7 @@ import onHeaders from "on-headers";
 
 import type { IncomingMessage, ServerResponse } from "http";
 
-import type { CacheControlOptions } from "../";
+import type { CacheControlOptions } from "../index";
 
 const isNumber = (input: any) => typeof input === "number" || !isNaN(+input);
 
