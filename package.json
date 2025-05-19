@@ -1,0 +1,55 @@
+{
+  "name": "@anthro-id/express-cache-control",
+  "version": "1.0.0",
+  "description": "Apply a cache control header through Express middleware.",
+  "homepage": "https://github.com/anthro-id/express-cache-control",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "./index.d.ts"
+  ],
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js",
+    "types": [
+      "./index.d.ts",
+      "./dist/index.d.ts"
+    ]
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm run build",
+    "build": "rimraf dist && tsc && tsc-alias"
+  },
+  "author": {
+    "name": "Anthro Indonesia - Open Source Section",
+    "url": "https://anthro.id"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthro-id/express-cache-control.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anthro-id/express-cache-control/issues"
+  },
+  "keywords": [
+    "express",
+    "max-age",
+    "maxage",
+    "cache",
+    "cache-control",
+    "no-cache"
+  ],
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/on-headers": "^1.0.3",
+    "express": "^5.1.0",
+    "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "on-headers": "^1.0.2"
+  }
+}
