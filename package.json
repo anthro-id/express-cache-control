@@ -1,5 +1,5 @@
 {
-  "name": "@anthro-id/express-cache-control",
+  "name": "@anthro.id/express-cache-control",
   "version": "1.0.0",
   "description": "Apply a cache control header through Express middleware.",
   "homepage": "https://github.com/anthro-id/express-cache-control",
