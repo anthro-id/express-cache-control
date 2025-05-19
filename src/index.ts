@@ -63,7 +63,8 @@ export default function (options: CacheControlOptions = {}): (req: IncomingMessa
         cacheControl.push("s-maxage=" + options.sMaxAge);
       };
 
-      if (cacheControl.length && !res.hasHeader("Cache-Control")) {
+      const isPreappliedHeadersPresented = typeof res !== "undefined" && "hasHeader" in res && res?.hasHeader?.("Cache-Control");
+      if (cacheControl.length && !isPreappliedHeadersPresented) {
         this.setHeader('Cache-Control', cacheControl.join(','));
       };
     });
