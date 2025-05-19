@@ -2,8 +2,8 @@
 An updated version of [Mousius/express-cache-controller](https://github.com/Mousius/express-cache-controller).
 
 # Differences
-- Supported TypeScript types.
-- [`immutable`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#immutable) option.
+- Supports TypeScript types.
+- Supports [`immutable`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#immutable) option.
 
 # Examples
 ```js
