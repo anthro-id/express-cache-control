@@ -43,6 +43,10 @@ export default function (options: CacheControlOptions = {}): (req: IncomingMessa
         cacheControl.push('proxy-revalidate');
       };
 
+      if (options.mustUnderstand) {
+        cacheControl.push("must-understand");
+      };
+
       if (options.mustRevalidate) {
         cacheControl.push('must-revalidate');
       } else if (!options.noCache) {
