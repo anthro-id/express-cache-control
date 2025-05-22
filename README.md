@@ -3,7 +3,7 @@ An updated version of [Mousius/express-cache-controller](https://github.com/Mous
 
 # Differences
 - Supports TypeScript types.
-- Supports [`immutable`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#immutable) option.
+- Supports undocumented options, such as [`immutable`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#immutable) and [`must-understand`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-understand).
 
 # Examples
 ```js
