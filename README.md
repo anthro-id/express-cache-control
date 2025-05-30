@@ -1,4 +1,4 @@
-# express-cache-controller
+# express-cache-control
 An updated version of [Mousius/express-cache-controller](https://github.com/Mousius/express-cache-controller).
 
 # Differences
