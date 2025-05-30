@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 })
 ```
 
-For more information about the API, please visit the [origin of the module](https://github.com/Mousius/express-cache-controller).
+For more information about the API, please visit the [origin of the module](https://github.com/Mousius/express-cache-controller#options).
 
 # License
 [MIT](LICENSE)
