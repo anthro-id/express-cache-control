@@ -46,8 +46,8 @@
     "no-cache"
   ],
   "devDependencies": {
-    "@types/express": "^5.0.2",
-    "@types/on-headers": "^1.0.3",
+    "@types/express": "^5.0.3",
+    "@types/on-headers": "^1.0.4",
     "express": "^5.1.0",
     "rimraf": "^6.0.1",
     "tsc-alias": "^1.8.16",
