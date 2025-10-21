@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/anthro-id/express-cache-control.git"
+    "url": "https://github.anthro.id/express-cache-control"
   },
   "bugs": {
-    "url": "https://github.com/anthro-id/express-cache-control/issues"
+    "url": "https://github.anthro.id/express-cache-control/issues"
   },
   "keywords": [
     "express",
