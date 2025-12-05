@@ -22,7 +22,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Update NPM
-        run: npm i -g npm@"^9.5"
+        run: npm i -g npm@latest"
 
       - name: Install Dependencies
         run: pnpm install
