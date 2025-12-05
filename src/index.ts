@@ -10,7 +10,7 @@ export default function cacheControl(options: CacheControlOptions = {}): (req: I
     res.cacheControl = options;
 
     onHeaders(res, function () {
-      let options = this?.cacheControl || {};
+      const options = this?.cacheControl || {};
       const directives = [];
 
       if (options.private) {
