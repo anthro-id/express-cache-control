@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: "24.x"
           cache: pnpm
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org
 
       - name: Update NPM
-        run: npm i -g npm@latest"
+        run: npm i -g npm@latest
 
       - name: Install Dependencies
         run: pnpm install
