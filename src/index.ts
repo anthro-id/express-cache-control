@@ -11,64 +11,64 @@ export default function cacheControl(options: CacheControlOptions = {}): (req: I
 
     onHeaders(res, function () {
       let options = this?.cacheControl || {};
-      let cacheControl = [];
+      const directives = [];
 
       if (options.private) {
-        cacheControl.push('private');
+        directives.push('private');
       } else if (options.public) {
-        cacheControl.push('public');
+        directives.push('public');
       };
 
       if (options.immutable) {
-        cacheControl.push("immutable");
+        directives.push("immutable");
       };
 
       if (options.noStore) {
         options.noCache = true;
-        cacheControl.push('no-store');
+        directives.push('no-store');
       };
 
       if (options.noCache) {
         options.maxAge = 0;
         delete options.sMaxAge;
-        cacheControl.push('no-cache');
+        directives.push('no-cache');
       } else {
         if (options.staleIfError) {
-          cacheControl.push('stale-if-error=' + options.staleIfError);
+          directives.push('stale-if-error=' + options.staleIfError);
         };
 
         if (options.staleWhileRevalidate) {
-          cacheControl.push('stale-while-revalidate=' + options.staleWhileRevalidate);
+          directives.push('stale-while-revalidate=' + options.staleWhileRevalidate);
         };
       };
 
       if (options.noTransform) {
-        cacheControl.push('no-transform');
+        directives.push('no-transform');
       };
 
       if (options.proxyRevalidate) {
-        cacheControl.push('proxy-revalidate');
+        directives.push('proxy-revalidate');
       };
 
       if (options.mustUnderstand) {
-        cacheControl.push("must-understand");
+        directives.push("must-understand");
       };
 
       if (options.mustRevalidate) {
-        cacheControl.push('must-revalidate');
+        directives.push('must-revalidate');
       };
 
       if (isNumber(options.maxAge)) {
-        cacheControl.push("max-age=" + options.maxAge);
+        directives.push("max-age=" + options.maxAge);
       };
 
       if (isNumber(options.sMaxAge)) {
-        cacheControl.push("s-maxage=" + options.sMaxAge);
+        directives.push("s-maxage=" + options.sMaxAge);
       };
 
       const hasCacheControlHeader = res?.hasHeader?.("Cache-Control");
-      if (cacheControl.length > 0 && !hasCacheControlHeader) {
-        this.setHeader("Cache-Control", cacheControl.join(", "));
+      if (directives.length > 0 && !hasCacheControlHeader) {
+        this.setHeader("Cache-Control", directives.join(", "));
       };
     });
 
