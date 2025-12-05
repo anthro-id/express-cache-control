@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      is-number:
+        specifier: ^7.0.0
+        version: 7.0.0
       on-headers:
         specifier: ^1.1.0
         version: 1.1.0
@@ -18,6 +21,9 @@ importers:
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
+      '@types/is-number':
+        specifier: ^7.0.5
+        version: 7.0.5
       '@types/on-headers':
         specifier: ^1.0.4
         version: 1.0.4
@@ -70,6 +76,9 @@ packages:
 
   '@types/http-errors@2.0.5':
     resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
+
+  '@types/is-number@7.0.5':
+    resolution: {integrity: sha512-NGmRpXeZg9qDX+AlmBeq4Xk9ruTMj0KfzspDCxTLAcpbts2EjojAvY6A1eumKHInMwGY4xHM8ILA9CHRHfUUWA==}
 
   '@types/node@24.10.1':
     resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
@@ -563,6 +572,8 @@ snapshots:
       '@types/serve-static': 2.2.0
 
   '@types/http-errors@2.0.5': {}
+
+  '@types/is-number@7.0.5': {}
 
   '@types/node@24.10.1':
     dependencies:

@@ -1,10 +1,9 @@
 import onHeaders from "on-headers";
+import isNumber from "is-number";
 
 import type { IncomingMessage, ServerResponse } from "http";
 
 import type { CacheControlOptions } from "../index";
-
-const isNumber = (input: any) => typeof input === "number" || !isNaN(+input);
 
 export default function cacheControl(options: CacheControlOptions = {}): (req: IncomingMessage, res: ServerResponse, next: (err?: unknown) => void) => void {
   return function (req, res, next) {
