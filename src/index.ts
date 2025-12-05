@@ -33,11 +33,11 @@ export default function cacheControl(options: CacheControlOptions = {}): (req: I
         delete options.sMaxAge;
         directives.push('no-cache');
       } else {
-        if (options.staleIfError) {
+        if (isNumber(options.staleIfError)) {
           directives.push('stale-if-error=' + options.staleIfError);
         };
 
-        if (options.staleWhileRevalidate) {
+        if (isNumber(options.staleWhileRevalidate)) {
           directives.push('stale-while-revalidate=' + options.staleWhileRevalidate);
         };
       };
