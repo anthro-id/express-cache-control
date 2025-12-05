@@ -1,6 +1,6 @@
 {
   "name": "@anthro.id/express-cache-control",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Apply a cache control header through Express middleware.",
   "homepage": "https://github.com/anthro-id/express-cache-control",
   "license": "MIT",
