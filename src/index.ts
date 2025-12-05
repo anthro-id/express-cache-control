@@ -32,6 +32,14 @@ export default function cacheControl(options: CacheControlOptions = {}): (req: I
         options.maxAge = 0;
         delete options.sMaxAge;
         cacheControl.push('no-cache');
+      } else {
+        if (options.staleIfError) {
+          cacheControl.push('stale-if-error=' + options.staleIfError);
+        };
+
+        if (options.staleWhileRevalidate) {
+          cacheControl.push('stale-while-revalidate=' + options.staleWhileRevalidate);
+        };
       };
 
       if (options.noTransform) {
@@ -48,14 +56,6 @@ export default function cacheControl(options: CacheControlOptions = {}): (req: I
 
       if (options.mustRevalidate) {
         cacheControl.push('must-revalidate');
-      } else if (!options.noCache) {
-        if (options.staleIfError) {
-          cacheControl.push('stale-if-error=' + options.staleIfError);
-        };
-
-        if (options.staleWhileRevalidate) {
-          cacheControl.push('stale-while-revalidate=' + options.staleWhileRevalidate);
-        };
       };
 
       if (isNumber(options.maxAge)) {
